@@ -22,7 +22,6 @@
 .logo {
     width: 138px;
     height: 30px;
-
 }
 
 .nav {
@@ -63,6 +62,10 @@ a {
     margin: auto;
 }
 
+#banner {
+    height: 550px;
+}
+
 .img {
     width: 100%;
     height: 100%;
@@ -70,18 +73,30 @@ a {
 
 .imgsec{
     display: flex;
+    margin-top: 30px;
 }
 
 .rightimg{
+    width: 700px;
     position: relative;
-    top: 20px;
-    left: 45px;
+    left: 25px;
+}
+
+.rightimg > img {
+    width: 100%;
+    height: 100%;
 }
 
 .twoimg{
+    height: 100%;
+    width: 735px;
     position: relative;
-    top: 20px;
-    left: 120px;
+    left: 55px;
+}
+
+.twoimg img {
+    width: 100%;
+    height: 340px;
 }
 
 .lowerimg{
