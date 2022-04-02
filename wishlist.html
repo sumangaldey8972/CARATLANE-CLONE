@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WishList</title>
+    <style>
+    #wish{
+    display: grid;
+    margin:25px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:auto;
+    gap: 30px;
+    }
+    #wish img{
+        height: 200px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    p{
+        margin-top: 0px;
+    }
+    .btn1{
+    padding: 10px 15px;
+    border-radius: 12px;
+    border:1px solid #654c7a;
+    background-color:white;
+    color:#654c7a;
+    cursor:pointer;
+    margin-right: 60px;
+}
+    </style>
+</head>
+<body>
+    <div id="wish">
+
+    </div>
+</body>
+</html>
+<script>
+    var cart=JSON.parse(localStorage.getItem("cartData")) || [];
+    var wish=JSON.parse(localStorage.getItem("wishlistData"));
+
+    wish.map(function(el){
+        console.log(el)
+
+        var box=document.createElement("div");
+        var image=document.createElement("img")
+        image.src=el.img
+        var Price=document.createElement("p")
+        Price.innerText=el.price
+        Price.style.fontSize="20px"
+        Price.style.fontWeight="bold"
+        var item=document.createElement("p")
+        item.innerText=el.name
+        var btn1=document.createElement("button");
+        btn1.innerText="Add To Cart";
+        btn1.setAttribute("class","btn1")
+        btn1.addEventListener("click",function(){
+            cartbutton(el);
+        })
+
+        box.append(image,Price,item,btn1)
+
+        document.querySelector("#wish").append(box);
+    })
+    function cartbutton(el)
+    {
+        alert("Item Added To Cart");
+        window.location.reload();
+        cart.push(el);
+        localStorage.setItem("cartData",JSON.stringify(cart));
+    }
+</script>

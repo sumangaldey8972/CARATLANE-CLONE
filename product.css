@@ -22,7 +22,7 @@ img{
 #filter{
     width: 100%;
     height: 100px;
-    background-color:#ebccf8;
+    background-image: linear-gradient(60deg, #ebccf8 40%, #beb3ff 60%);
     margin: auto;
     display: flex;
 }
@@ -43,6 +43,12 @@ img{
     padding: 12px;
     background-color: white;
     margin-left:20px;
+}
+.moresort button:hover{
+    cursor: pointer;
+    background-color: #c850c0;
+    background-image: linear-gradient(59deg, #c850c0 38%, #4158d0 78%);
+    color: white;
 }
 .feat select{
     border: none;
@@ -95,40 +101,3 @@ p{
     cursor:pointer;
     margin-left:30px;
 }
-@media all and (min-width: 150px) and (max-width: 420px) {
-    img{
-        width:100%;
-        height: 300px;
-    }
-    #container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    #filter{
-    width:100%;
-    height:300px;
-    }
-    select{
-        width: 100%;
-    }
-    #container button{
-        margin-right: 25px;
-    }
-    #select{
-        width: 100%;
-        grid-template-columns: repeat(1,1fr);
-    }
-    .btn1{
-        padding: 5px;
-    }
-    .btn2{
-        margin-left:0;
-        padding: 5px;
-    }
-    .moresort{
-        width:100%;
-    }
-    .feat{
-        width: 50%;
-        margin-left:10px;
-    }
-  }
