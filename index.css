@@ -47,7 +47,7 @@
 .nav>.dropdown>a:hover{ 
   color: black;
   border-bottom:2px solid #51248d;
-  
+  cursor: pointer;
 }
 
 .pin-search {
@@ -254,11 +254,6 @@
   top: 80px;
   left: 110px;
 }
-
-/* 
-p {
-    font-size: 11px;
-} */
 
 .exploreimg {
   position: relative;
@@ -831,7 +826,9 @@ p {
 
 #insta img:hover {
   -ms-transform: scale(1.2);
+  /* IE 9 */
   -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
   transform: scale(1.3);
   transition: 0.5s ease;
 }
