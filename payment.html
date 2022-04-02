@@ -185,7 +185,8 @@ width: 90%;
 border: none;
 height: 35px;
 border-radius: 5px;
-background: linear-gradient(to right, blue 43%, purple 57%);
+background-color: #c850c0;
+background-image: linear-gradient(59deg, #c850c0 38%, #4158d0 78%);
 margin-top: 20px;
 }
 #btn1:hover{
@@ -293,6 +294,18 @@ margin-top: -20px;
 
 .l1{
     display: flex;
+    top:10%;
+    position: fixed;
+
+}
+.footer{
+    bottom: 0%;
+    /* position: fixed; */
+    width: 100%;
+    
+}
+.f1{
+    margin-right: -100px;
 }
 </style>
 </head>
@@ -428,7 +441,7 @@ margin-top: -20px;
 //         location.href = "Pay.html";
 //     };
 
- var pay=JSON.parse(localStorage.getItem("cart")) || []
+ var pay=JSON.parse(localStorage.getItem("cartData")) || []
     console.log(pay)
 
     var total = pay.reduce(function (sum, elem, index, arr) {
@@ -461,7 +474,7 @@ margin-top: -20px;
 
     var img = document.createElement("img");
     img.setAttribute("class","img1")
-    img.src = elem.image_url;
+    img.src = elem.img;
 
     var name = document.createElement("p");
     name.textContent = elem.name;

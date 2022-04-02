@@ -226,7 +226,8 @@
     height: 50px;
     width: 100%;
     border-radius: 5px;
-    background: linear-gradient(to right, blue 43%, purple 57%);
+    background-color: #c850c0;
+    background-image: linear-gradient(59deg, #c850c0 38%, #4158d0 78%);
     padding-right: 65px;
     margin-top: 20px;
    }
@@ -373,7 +374,7 @@
   <body>
       
      <div class="navbar">
-        <a  href="cart.html" class="prev"><i class="fa-solid fa-arrow-left"></i></a>
+        <a  href="homepage.html" class="prev"><i class="fa-solid fa-arrow-left"></i></a>
          <img src="https://www.reviewsxp.com/image/CARATLANE.jpg"
          alt=""
          />
@@ -464,7 +465,7 @@
 
     
 
-    var cartd=JSON.parse(localStorage.getItem("cart")) || []
+    var cartd=JSON.parse(localStorage.getItem("cartData")) || []
     console.log(cartd)
 
     var length = cartd.length;
@@ -503,7 +504,7 @@
 
     var img = document.createElement("img");
     img.setAttribute("class","img1")
-    img.src = elem.image_url;
+    img.src = elem.img;
 
     var name = document.createElement("p");
     name.textContent = elem.name;
@@ -535,7 +536,7 @@
   function removeItem(elem, index) {
     console.log(elem, index);
     cartd.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cartd));
+    localStorage.setItem("cartData", JSON.stringify(cartd));
     window.location.reload();
   }
 
